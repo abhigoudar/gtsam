@@ -152,7 +152,7 @@ if(NOT Boost_SERIALIZATION_LIBRARY OR NOT Boost_SYSTEM_LIBRARY OR NOT Boost_FILE
 endif()
 
 # Allow for not using the timer libraries on boost < 1.48 (GTSAM timing code falls back to old timer library)
-option(GTSAM_DISABLE_NEW_TIMERS "Disables using Boost.chrono for timing" OFF)
+option(GTSAM_DISABLE_NEW_TIMERS "Disables using Boost.chrono for timing" ON)
 
 # JLBC: This was once updated to target-based names (Boost::xxx), but it caused
 # problems with Boost versions newer than FindBoost.cmake was prepared to handle,
@@ -403,7 +403,7 @@ add_subdirectory(gtsam)
 add_subdirectory(tests)
 
 # Build examples
-add_subdirectory(examples)
+#add_subdirectory(examples)
 
 # Build timing
 add_subdirectory(timing)

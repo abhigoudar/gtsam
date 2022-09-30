@@ -6,4 +6,4 @@ install(FILES ${discrete_headers} DESTINATION include/gtsam_unstable/discrete)
 add_subdirectory(tests)
 
 # Add examples
-add_subdirectory(examples)
+# add_subdirectory(examples)
