@@ -21,6 +21,7 @@
 #include <gtsam/base/Manifold.h>
 #include <gtsam/basis/Basis.h>
 
+#include <Eigen/Sparse>
 #include <unsupported/Eigen/KroneckerProduct>
 
 namespace gtsam {

@@ -83,6 +83,7 @@ set_target_properties(gtsam_unstable PROPERTIES
   VERSION             ${gtsam_unstable_version}
   SOVERSION           ${gtsam_unstable_soversion})
 target_link_libraries(gtsam_unstable PUBLIC gtsam)
+target_link_libraries(gtsam_unstable PRVIATE ${GTSAM_BOOST_LIBRARIES})
 # No need to link against Boost here, it's inherited from gtsam PUBLIC interface
 
 if(WIN32) # Add 'lib' prefix to static library to avoid filename collision with shared library
@@ -108,7 +109,7 @@ list(APPEND GTSAM_UNSTABLE_EXPORTED_TARGETS gtsam_unstable)
 set(GTSAM_UNSTABLE_EXPORTED_TARGETS "${GTSAM_UNSTABLE_EXPORTED_TARGETS}" PARENT_SCOPE)
 
 # Build examples
-add_subdirectory(examples)
+# add_subdirectory(examples)
 
 # Build timing
 add_subdirectory(timing)
