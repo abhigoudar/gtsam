@@ -85,6 +85,17 @@ public:
     return isam_.calculateEstimate<VALUE>(key);
   }
 
+  /** Check whether variable with given key exists in linearization point */
+  bool valueExists(Key key) const { 
+    return isam_.valueExists(key); 
+  }
+
+  /** return timestamp for key */
+  double getTimestamp(Key key) const { 
+    // possibly check for existence ?
+    return keyTimestampMap_.at(key); 
+  }
+
   /** return the current set of iSAM2 parameters */
   const ISAM2Params& params() const {
     return isam_.params();
